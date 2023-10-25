@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Lottie</title>
+
+    <!-- Animasi Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+</head>
+<body>
+    <!-- Kontainer untuk animasi Lottie -->
+    <div id="lottie-container" style="width: 100px; height: 100px;"></div>
+
+    <script>
+        // Konfigurasi animasi Lottie
+        const animationContainer = document.getElementById('lottie-container');
+        const animData = {
+            container: animationContainer,
+            renderer: 'svg', // Anda dapat menggunakan 'svg', 'canvas', atau 'html' sebagai renderer
+            loop: true,
+            autoplay: true,
+            path: 'json/Suci_the_Ghost.json' // Sesuaikan path dengan struktur folder Anda
+        };
+
+        // Muat dan tampilkan animasi
+        const anim = lottie.loadAnimation(animData);
+    </script>
+</body>
+</html>

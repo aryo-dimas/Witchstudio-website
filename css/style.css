@@ -91,6 +91,8 @@ body {
     display: none;
 }
 
+
+
 /* Background Hero */
 .hero {
     min-height: 100vh;
@@ -145,6 +147,53 @@ body {
     background-color: var(--primary);
     border-radius: 0.5rem;
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+
+/* Animasi */
+#lottie-container {
+    display: block; /* atau sesuaikan dengan atribut yang sesuai */
+    width: 300px; /* atau sesuaikan dengan ukuran yang sesuai */
+    height: 300px; /* atau sesuaikan dengan ukuran yang sesuai */
+    padding-top: 2rem;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+footer .socials {
+    padding: 1rem;
+}
+
+footer .socials a {
+    margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links teng:hover {
+    color: var(--bg);
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+footer .links teng {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+footer .credit teng {
+    color: var(--bg);
+    font-weight: 700;
 }
 
 
@@ -208,4 +257,5 @@ body {
     html {
         font-size: 55%;
     }
+    
 }

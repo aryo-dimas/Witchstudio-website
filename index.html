@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
 
     <!-- Navbar Start -->
     <nav class="navbar">
@@ -44,16 +46,56 @@
             <h1>Welcome To My <span>Website</span></h1>
             <p>Apapun yang kamu cari, Semuanya ada di sini.</p>
             <p>Kalau tidak ketemu ?</p>
-            <teng href="#" class="cta">Tanyakan Sekarang</teng>
+            <teng href="#halaman2.html" class="cta">Tanyakan Sekarang</teng>
         </main>
+
+        <!-- animasi gif -->
+        <div id="lottie-container"></div>
+
+    
     </section>
     <!-- Bagian Utama Hero End -->
 
-
+    <!-- Footer Start -->
+    <footer>
+        <div class="socials">
+            <a herf="#"><i data-feather="instagram"></i></a>
+            <a herf="#"><i data-feather="youtube"></i></a>
+            <a herf="#"><i data-feather="facebook"></i></a>
+            <a herf="#"><i data-feather="twitter"></i></a>
+            <a herf="#"><i data-feather="message-circle"></i></a>
+        </div>
+        <div class="links">
+            <teng href="#home">Home</teng>
+            <teng href="#about">Tentang Kami</teng>
+            <teng href="#menu">Menu</teng>
+            <teng href="#contact">Kontak</teng>
+        </div>
+        <div class="credit">
+            <p>Created by <teng href="">Aryo Dimas</teng>. | &copy; 2023.</p>
+        </div>
+    </footer>
+    <!-- Footer Start -->
 
     <!-- Feather Icon -->
     <script>
       feather.replace();
+    </script>
+
+    <!-- Animasi Lottie -->
+    <script>
+    // Konfigurasi animasi Lottie
+        const animationContainer = document.getElementById('lottie-container');
+        const animData = {
+            container: animationContainer,
+            renderer: 'sbg', // Anda dapat menggunakan 'svg', 'canvas', atau 'html' sebagai renderer
+            loop: true, // Atur ke true untuk looping animasi
+            autoplay: true, // Atur ke true untuk pemutaran otomatis
+            path: 'json/Suci_the_Ghost.json' // Ganti dengan nama file Lottie JSON yang Anda miliki
+        };
+
+        // Muat dan tampilkan animasi
+        const anim = lottie.loadAnimation(animData);
     </script>
 
     <!-- Java Script -->
