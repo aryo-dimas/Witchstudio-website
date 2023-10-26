@@ -17,29 +17,23 @@
     <!-- My Style -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Background Webem -->
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
 
+    <!-- Background Webem  -->
+    <style>
         video {
-            position: fixed;
+            position: relative;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         #content {
             position: relative;
             z-index: 1;
             text-align: center;
             color: #fff;
-            padding: 20px;
+            padding-top: 20px;
         }
     </style>
 
@@ -66,12 +60,6 @@
     </nav>
     <!-- Navbar Ens -->
 
-    <!-- Background Webem -->
-    <video autoplay muted loop>
-        <source src="webem/Civic FD2R.webm" type="video/webm">
-        Browser Anda tidak mendukung video HTML5.
-    </video>
-
 
     <!-- Bagian Utama Hero Start-->
     <section class="hero" id="home">
@@ -81,13 +69,15 @@
             <p>Kalau tidak ketemu ?</p>
             <teng href="#halaman2.html" class="cta">Tanyakan Sekarang</teng>
         </main>
-
-        <!-- animasi gif -->
-        <div id="lottie-container"></div>
-
-    
     </section>
     <!-- Bagian Utama Hero End -->
+
+    <!-- Background Webem -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="webem/Civic FD2R.webm" type="video/webm">
+        </video>
+    </div>
 
     <!-- Footer Start -->
     <footer>
@@ -116,20 +106,7 @@
     </script>
 
     <!-- Animasi Lottie -->
-    <script>
-    // Konfigurasi animasi Lottie
-        const animationContainer = document.getElementById('lottie-container');
-        const animData = {
-            container: animationContainer,
-            renderer: 'sbg', // Anda dapat menggunakan 'svg', 'canvas', atau 'html' sebagai renderer
-            loop: true, // Atur ke true untuk looping animasi
-            autoplay: true, // Atur ke true untuk pemutaran otomatis
-            path: 'json/Suci_the_Ghost.json' // Ganti dengan nama file Lottie JSON yang Anda miliki
-        };
-
-        // Muat dan tampilkan animasi
-        const anim = lottie.loadAnimation(animData);
-    </script>
+    
 
     <!-- Java Script -->
     <script src="js/script.js"></script>
