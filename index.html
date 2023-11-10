@@ -39,6 +39,13 @@
         }
     </style>
 
+    <!-- pop cat-->
+
+    <title>Popcat Game</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- pop cat-->
+
 </head>
 <body>
     
@@ -67,72 +74,19 @@
     <!-- Navbar Ens -->
 
 
+
     <!-- Bagian Utama Hero Start-->
     <section class="hero" id="home">
         <main class="content">
             <h1>Welcome To My <span>Website</span></h1>
-            <p>Dapatkan Hadiah untuk pengunjung pertama kami.</p>
-            <d>Apa anda Mau Duit 1 Milyar ?</d>
+            <p>Semua yang kamu cari ada disini...</p>
+            <d>kamu mendapat <span id="score">0</span> pop!   dari cat</d>
 
-        </main>
-
-        
-
+        </main>  
     </section>
     <!-- Bagian Utama Hero End -->
 
-    <!-- Button 2 Start -->
-    <button id="myButton1">Iya</button>
-    <button id="myButton2" onclick="showText()">Tidak</button>
-    <div id="message" style="position: absolute; left: 100px; top: 500px; visibility: hidden;">
-        Yahh... sayang sekali anda tidak mau uang nya.!
-    </div>
-
-    <script>
-        const myButton1 = document.getElementById('myButton1');
-        const myButton2 = document.getElementById('myButton2');
-
-        myButton1.addEventListener('click', function() {
-            function animateButton() {
-                myButton1.style.transform = 'scale(0.9)'; // Mengubah ukuran tombol saat ditekan
-                setTimeout(() => {
-                    myButton1.style.transform = 'scale(1)'; // Mengembalikan ukuran tombol ke ukuran semula setelah selesai ditekan
-                }, 300); // Waktu animasi (0.3 detik)
-            }
-            // Menghasilkan posisi acak antara 0 dan 500 piksel untuk horizontal (left)
-            const randomLeft = Math.floor(Math.random() * 300);
-            // Menghasilkan posisi acak antara 0 dan 500 piksel untuk vertikal (top)
-            const randomTop = Math.floor(Math.random() * 300);
-
-            myButton1.style.left = randomLeft + 'px';
-            myButton1.style.top = randomTop + 'px';
-
-            myButton1.addEventListener('click', function() {
-                animateButton();
-                moveButtonRandom();
-            });
-
-        });
-
-        // Menonaktifkan tombol kedua agar tidak bereaksi saat diklik
-        function animateButton() {
-            const myButton2 = document.getElementById('myButton2');
-            myButton2.style.transform = 'scale(0.9)'; // Mengubah ukuran tombol saat ditekan
-            setTimeout(() => {
-                myButton2.style.transform = 'scale(1)'; // Mengembalikan ukuran tombol ke ukuran semula setelah selesai ditekan
-            }, 300); // Waktu animasi (0.3 detik)
-        }
-        function showText() {
-            const message = document.getElementById('message');
-            message.style.visibility = 'visible';
-
-            // Menggunakan setTimeout() untuk menghilangkan teks setelah 3 detik (3000 milidetik)
-            setTimeout(function () {
-                message.style.visibility = 'hidden';
-            }, 3000);
-        }
-    </script>
-    <!-- Button 2 end-->
+    
 
     <!-- Background Webem -->
     <div class="video-container">
@@ -141,8 +95,11 @@
         </video>
     </div>
 
+
+
     <!-- Footer Start -->
     <footer>
+
         <div class="socials">
             <a herf="#"><i data-feather="instagram"></i></a>
             <a herf="#"><i data-feather="youtube"></i></a>
@@ -159,8 +116,16 @@
         <div class="credit">
             <p>Created by <teng href="">Aryo Dimas</teng>. | &copy; 2023.</p>
         </div>
+
+        <div id ="game-container">
+            <img id="popcat" src="image/gambar-1.png" alt="Popcat Image">
+            <audio id="popSound" src="sound/pop_sound.mp3"></audio>
+        </div>
+        
     </footer>
     <!-- Footer Start -->
+
+
 
     <!-- Feather Icon -->
     <script>
