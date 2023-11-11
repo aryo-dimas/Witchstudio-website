@@ -1,25 +1,23 @@
-// Kelas aktif jadi ada
-const navbarNav = document.querySelector('.navbar-nav');
-
-//kectika dokumen di klik
-document.querySelector('#hamburger-menu').onclick = () =>{
-    navbarNav.classList.toggle('active');
-};
-
-//pas diklik di luar dia hilang
-const hamburger = document.querySelector('#hamburger-menu');
-
-document.addEventListener('click' , function(e){
-    if(!hamburger.contains(e.target)&& !navbarNav.contains(e.target)) {
-        navbarNav.classList.remove('active');
-    }
-});
-
-
 document.addEventListener("DOMContentLoaded", () => {
+  const navbarNav = document.querySelector(".navbar-nav");
+
+  document.querySelector("#hamburger-menu").onclick = () => {
+    navbarNav.classList.toggle("active");
+  };
+
+  const hamburger = document.querySelector("#hamburger-menu");
+
+  document.addEventListener("click", function (e) {
+    if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+      navbarNav.classList.remove("active");
+    }
+  });
+
   const popcat = document.getElementById("popcat");
   const scoreDisplay = document.getElementById("score");
   const popSound = document.getElementById("popSound");
+  const popUpContainer = document.getElementById("popUpContainer");
+  const closePopUp = document.getElementById("closePopUp");
 
   let score = 0;
   let isPlaying = true;
@@ -27,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function toggleImage() {
     if (isSecondImage) {
-      popcat.src = "image/gambar-1.png"; // Ganti dengan path gambar pertama
+      popcat.src = "image/gambar-1.png";
       isSecondImage = false;
     } else {
-      popcat.src = "image/gambar-2.png"; // Ganti dengan path gambar kedua
+      popcat.src = "image/gambar-2.png";
       isSecondImage = true;
     }
   }
@@ -40,13 +38,44 @@ document.addEventListener("DOMContentLoaded", () => {
       score++;
       scoreDisplay.textContent = score;
 
-      toggleImage(); // Ganti gambar saat diklik
-      setTimeout(toggleImage, 100); // Ganti kembali setelah setengah detik
+      toggleImage();
+      setTimeout(toggleImage, 100);
     }
-  });
-});
-// Menambahkan event listener untuk klik pada Popcat
-popcat.addEventListener("click", () => {
+
     // Memutar suara ketika Popcat diklik
     popSound.play();
+
+    // Tampilkan popup setelah 10 klik dengan animasi
+    if (score === 10) {
+      popUpContainer.style.display = "block";
+
+      // Tambahkan kelas "show" setelah sedikit waktu untuk memberi efek animasi
+      setTimeout(() => {
+        popUpContainer.classList.add("show");
+      }, 50);
+    }
+  });
+
+  // Tambahkan event listener untuk menutup popup dengan animasi
+  closePopUp.addEventListener("click", function (event) {
+    event.stopPropagation();
+    popUpContainer.classList.remove("show");
+
+    // Hapus kelas "show" setelah sedikit waktu untuk memberi efek animasi
+    setTimeout(() => {
+      popUpContainer.style.display = "none";
+    }, 500);
+  });
+
+  // Tambahkan event listener untuk menutup popup saat mengklik di luar popup
+  popUpContainer.addEventListener("click", function (event) {
+    if (event.target === popUpContainer) {
+      popUpContainer.classList.remove("show");
+
+      // Hapus kelas "show" setelah sedikit waktu untuk memberi efek animasi
+      setTimeout(() => {
+        popUpContainer.style.display = "none";
+      }, 500);
+    }
+  });
 });

@@ -21,7 +21,7 @@ body {
     background-color: var(--bg);
     color: #ffffff;
 
-    /*min-height: 2000px; */
+    /* min-height: 2000px; */
 }
 
 /* Navbar */
@@ -42,19 +42,24 @@ body {
 }
 
 /* Hantu */
+.navbar-Symbol {
+    position: relative; /* Membuat elemen posisi relatif agar dapat menggunakan properti top, left, right, atau bottom */
+}
+
 .navbar-Symbol img {
-    position: absolute;
-    left: 20px;
-    top: 1px;
+    position: fixed;
+    left: 3px;
+    top: 8px;
 
     width: 100px;
     height:100px;
-    margin-right: 10px;
+    margin-left: -10px;
     z-index: 8889;
 }
 /* Hantu */
 
 .navbar .navbar-logo {
+    position: absolute;
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
@@ -177,6 +182,119 @@ body {
     box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
 
+
+/* Popcat Game*/
+#game-container {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    align-items: flex-end; /* Mengatur elemen ke bawah */
+    justify-content: flex-start; /* Mengatur elemen ke kiri */
+    height: 100px; /* Sesuaikan tinggi sesuai kebutuhan */
+    width: 100%; /* Memenuhi lebar footer */
+    padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+}
+
+#popcat {
+    position: fixed;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    z-index: 9999;
+}
+
+#score-container {
+    display: flex;
+    align-items: center; /* Untuk perataan vertikal */
+}
+
+#score {
+    margin-left: 5px; /* Untuk memberikan jarak antara teks dan nilai skor */
+}
+
+#popUpImage {
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 4444;
+}
+
+/* CSS untuk Pop Up dengan Animasi Bounce dari Tengah */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+#popUpContainer {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: bounceIn 0.5s ease forwards;
+    display: none;
+    padding: 10%;
+    background-color: transparent;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 99999;
+}
+
+/* Menampilkan popup dengan animasi */
+#popUpContainer.show {
+    animation: bounceIn 0.5s ease forwards;
+}
+
+/* Menghilangkan popup dengan animasi */
+#popUpContainer.hide {
+    animation: bounceOut 0.5s ease forwards;
+}
+
+/* Pop Cat Game*/
+
+/*tombol halaman 2*/
+/* Bagian About */
+.about {
+    padding: 1.4rem 7%;
+    text-align: center;
+}
+
+/* Bentuk tombol Akun */
+.about .new-tab-button {
+    display: inline-block;
+    margin: 10px; /* Sesuaikan margin sesuai kebutuhan */
+    padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+    text-align: center; /* Pusatkan tombol */
+}
+
+.about .new-tab-button img {
+    width: 150px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    height: auto; /* Menjaga aspek gambar */
+    border-radius: 8px; /* Membuat sudut gambar menjadi agak melengkung */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan ke gambar */
+}
+
+
+/* bentuk tombol */
+
+
+
 /* Animasi 
 #lottie-container {
     display: block;
@@ -225,38 +343,6 @@ footer .credit teng {
 
 
 
-/* Popcat */
-#game-container {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    align-items: flex-end; /* Mengatur elemen ke bawah */
-    justify-content: flex-start; /* Mengatur elemen ke kiri */
-    height: 100px; /* Sesuaikan tinggi sesuai kebutuhan */
-    width: 100%; /* Memenuhi lebar footer */
-    padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
-}
-
-#popcat {
-    position: static;
-    bottom: 0;
-    width: 200px;
-    height: 200px;
-    background-color: transparent;
-    z-index: 5555;
-}
-
-#score-container {
-    display: flex;
-    align-items: center; /* Untuk perataan vertikal */
-}
-
-#score {
-    margin-left: 5px; /* Untuk memberikan jarak antara teks dan nilai skor */
-}
-/* Pop Cat */
-
-
 /* Media Queris */
 
 
@@ -265,10 +351,17 @@ footer .credit teng {
     html {
         font-size: 75%;
     }
-    #myButton1 {
-        transform: scale(1);
+    #game-container  {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        align-items: flex-end; /* Mengatur elemen ke bawah */
+        justify-content: flex-start; /* Mengatur elemen ke kiri */
+        height: 100px; /* Sesuaikan tinggi sesuai kebutuhan */
+        width: 100%; /* Memenuhi lebar footer */
+        padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
     }
-    #myButton2 {
+    #popcat {
         transform: scale(1);
     }
 }
@@ -313,11 +406,17 @@ footer .credit teng {
         transform: scaleX(0.2);
     }
 
-    #myButton1 {
-        transform: scale(0.8);
-        top: 70%;
+    #game-container  {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        align-items: flex-end; /* Mengatur elemen ke bawah */
+        justify-content: flex-start; /* Mengatur elemen ke kiri */
+        height: 40px; /* Sesuaikan tinggi sesuai kebutuhan */
+        width: 40%; /* Memenuhi lebar footer */
+        padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
     }
-    #myButton2 {
+    #popcat {
         transform: scale(0.8);
         top: 70%;
     }
@@ -331,6 +430,20 @@ footer .credit teng {
 @media (max-width: 450px){
     html {
         font-size: 55%;
+    }
+    #game-container  {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        align-items: flex-end; /* Mengatur elemen ke bawah */
+        justify-content: flex-start; /* Mengatur elemen ke kiri */
+        height: 30px; /* Sesuaikan tinggi sesuai kebutuhan */
+        width: 30%; /* Memenuhi lebar footer */
+        padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+    }
+    #popcat {
+        transform: scale(0.4);
+        top: 70%;
     }
     
 }
