@@ -431,19 +431,11 @@ footer .credit teng {
     html {
         font-size: 55%;
     }
-    #game-container  {
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        align-items: flex-end; /* Mengatur elemen ke bawah */
-        justify-content: flex-start; /* Mengatur elemen ke kiri */
-        height: 30px; /* Sesuaikan tinggi sesuai kebutuhan */
-        width: 30%; /* Memenuhi lebar footer */
-        padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
-    }
+
+    
     #popcat {
-        transform: scale(0.4);
-        top: 70%;
+        transform: bottom(-50px);
+        position: relative;
     }
     
 }
