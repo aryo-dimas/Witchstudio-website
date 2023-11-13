@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const videoElement = document.getElementById("background-video");
   const navbarNav = document.querySelector(".navbar-nav");
 
   document.querySelector("#hamburger-menu").onclick = () => {
@@ -18,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const popSound = document.getElementById("popSound");
   const popUpContainer = document.getElementById("popUpContainer");
   const closePopUp = document.getElementById("closePopUp");
+  const backgroundMusic = document.getElementById("background-music");
+  const backgroundAlert = document.getElementById("background-alert");
 
   let score = 0;
   let isPlaying = true;
@@ -48,17 +51,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // Tampilkan popup setelah 10 klik dengan animasi
     if (score === 10) {
       popUpContainer.style.display = "block";
+      backgroundAlert.play();
 
       // Tambahkan kelas "show" setelah sedikit waktu untuk memberi efek animasi
       setTimeout(() => {
         popUpContainer.classList.add("show");
       }, 50);
     }
+
+    // Periksa apakah skor mencapai 20
+    if (score >= 20 && !videoElement.hasAttribute("data-played")) {
+      videoElement.src = "webem/polish_cow.webm"; // Ganti dengan path ke video baru
+
+      // Putar lagu baru ketika latar belakang berganti
+      backgroundMusic.play();
+
+      videoElement.setAttribute("data-played", "true");
+    }
   });
 
   // Tambahkan event listener untuk menutup popup dengan animasi
   closePopUp.addEventListener("click", function (event) {
-    event.stopPropagation();
     popUpContainer.classList.remove("show");
 
     // Hapus kelas "show" setelah sedikit waktu untuk memberi efek animasi
@@ -79,3 +92,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Subs Youtub.js
+function subscribeToChannel() {
+  var channelUsername = "aryo_dimas";
+  window.open(
+    "https://www.youtube.com/c/" + channelUsername + "?sub_confirmation=1"
+  );
+}
