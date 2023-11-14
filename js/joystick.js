@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       handle.style.transform = `translateY(${deltaY * 10}px)`;
     }
   }
-
+  
   function rollAll() {
     debugEl.textContent = "rolling...";
 
@@ -48,4 +48,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
 });

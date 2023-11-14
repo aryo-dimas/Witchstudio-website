@@ -9,16 +9,20 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 8888;
+    z-index: 7777;
 }
 
 /* tombol ke halaman slot start */
 .tombol {
-	position: relative;
+	position: fixed;
     display: inline-block;
-    position: relative;
     overflow: hidden;
     border-radius: 8px;
+
+	top: 50px;
+    left: 100px;
+    width: 100px;
+    height: 40px;
 }
 
 .tombol img {
@@ -26,7 +30,7 @@
     width: 10%;
     height: auto;
 	margin-left: -100px;
-	margin-top: -50px;
+	margin-top: -30px;
     display: block;
 }
 /* tombol ke halaman slot end */
@@ -36,16 +40,16 @@
 
 
 .debug {
-	position: fixed;
-	top: 4px;
-	left: 50%;
+	position: absolute;
+	top: 20px;
+	left: 45%;
 	transform: translateX(-50%);
 	padding: 4px;
 	background: white;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	font-family: monospace;
 	font-size: 1.6rem;
-	z-index: 5555;
+	z-index: 8888;
 }
 
 html, body {
@@ -66,7 +70,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 23.7px; /* Adjusted based on $icon_width value */
-	background: linear-gradient(45deg, grey 0%, lightgray 100%);
+	background: linear-gradient(45deg, black 0%, #2B1E18 20%, #DAA520 40%, #2B1E18 60%, black 80%);
 	border-top: 1px solid rgba(255, 255, 255, 0.6);
 	border-right: 1px solid rgba(53, 50, 50, 0.6);
 	border-left: 1px solid rgba(0, 0, 0, 0.4);
@@ -168,7 +172,7 @@ body {
     top: 20px;
     width: 50px;
     height: 100px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, transparent 50%, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(20deg, black 0%, silver 100%);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -179,13 +183,56 @@ body {
 #handle {
     width: 40px;
     height: 40px;
-    background-color: #555;
+    background-color: red;
     border-radius: 50%;
     cursor: grab;
-	z-index: 5555;
+	z-index: 9999;
 }
 
 #joystick.active #handle {
     cursor: grabbing;
 }
 
+
+
+
+
+
+
+
+
+
+/* Laptop */
+@media (max-width: 1366px){
+	.navbar {
+        height: auto;
+    }
+
+    .tombol {
+        left: 100px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+    }
+
+    .tombol {
+        left: 100px;
+    }
+}
+
+/* Hape */
+@media (max-width: 450px) {
+    .navbar {
+        height: auto; 
+    }
+
+    .tombol {
+        left: 100px; 
+        width: 15px; 
+        height: 60px;
+    }
+}
