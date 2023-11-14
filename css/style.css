@@ -52,7 +52,7 @@ body {
     top: 8px;
 
     width: 100px;
-    height:100px;
+    height:auto;
     margin-left: -10px;
     z-index: 8889;
 }
@@ -124,10 +124,6 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    /*background-image: url('../gif/Civic_FD2R.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
     position: relative;
     z-index: 10;
 }
@@ -276,7 +272,6 @@ body {
 
 /* Pop Cat Game*/
 
-/*tombol halaman 2*/
 /* Bagian About */
 .about {
     padding: 1.4rem 7%;
@@ -298,18 +293,21 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan ke gambar */
 }
 
-
 /* bentuk tombol */
 
 
 
-/* Animasi 
-#lottie-container {
-    display: block;
-    width: 300px; 
-    height: 300px; 
-    padding-top: 2rem;
-} */
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Footer */
