@@ -96,18 +96,31 @@
     <!-- Tentang kami Start -->
     <section id="about" class="about">
         <main class="content"></main>
-            <a href="https://www.youtube.com/c/aryo_dimas/" target="_blank" class="new-tab-button">
-                <img src="gif/Happy_little_Pumpkin.gif" alt="Tombol Gambar">
-            </a>
-            <a href="https://www.instagram.com/art_you_dimas/" target="_blank" class="new-tab-button">
-                <img src="gif/Happy_little_Pumpkin.gif" alt="Tombol Gambar">
-            </a>
-            <a href="https://www.fiverr.com/users/aryo_dimas/" target="_blank" class="new-tab-button">
-                <img src="gif/Happy_little_Pumpkin.gif" alt="Tombol Gambar">
-            </a>
-            <a href="https://app.lottiefiles.com/" target="_blank" class="new-tab-button">
-                <img src="gif/Happy_little_Pumpkin.gif" alt="Tombol Gambar">
-            </a>
+            <h2>Social <span>Media</span></h2>
+
+            <!-- Video YouTube -->
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/FGoa9VFaejo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+
+            <div class="video-info">
+                <div class="left-content">
+                    <a href="https://www.fiverr.com/aryo_dimas/" target="_blank" class="new-tab-button">
+                        <img src="gif/Happy_little_Pumpkin.gif" alt="Tombol Gambar">
+                    </a>
+                </div>
+                <div class="right-content">
+                    <p>Bagus bukan!,</p>
+                    <p>Mau di buat kan animasi seperti itu ?, segera pesan disini</p>
+                    <p>kami akan membuatkan yang terbaik buat kamu.</p>
+                </div>
+            </div>
     </section>
     <!-- Tentang kami end -->
 
@@ -150,6 +163,34 @@
         
     </footer>
     <!-- Footer Start -->
+
+    <!-- Sertakan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Tangkap peristiwa klik pada tautan
+            $('a[href^="#"]').on('click', function(event) {
+                // Pastikan bahwa ini bukan tautan eksternal
+                if (this.hash !== "") {
+                    // Cegah perilaku default dari tautan
+                    event.preventDefault();
+
+                    // Ambil ID dari tautan yang diklik
+                    var target = this.hash;
+
+                    // Gulir ke elemen yang sesuai dengan kecepatan animasi
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top
+                    }, 800, function(){
+                        // Atur URL hash setelah animasi (opsional)
+                        window.location.hash = target;
+                    });
+                }
+            });
+        });
+    </script>
+
 
 
 

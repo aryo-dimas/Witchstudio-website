@@ -73,8 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Tambahkan event listener untuk menutup popup dengan animasi
   closePopUp.addEventListener("click", function (event) {
     popUpContainer.classList.remove("show");
-
-    // Hapus kelas "show" setelah sedikit waktu untuk memberi efek animasi
+    
     setTimeout(() => {
       popUpContainer.style.display = "none";
     }, 500);
@@ -93,10 +92,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Subs Youtub.js
-function subscribeToChannel() {
-  var channelUsername = "aryo_dimas";
-  window.open(
-    "https://www.youtube.com/c/" + channelUsername + "?sub_confirmation=1"
-  );
-}
+
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});

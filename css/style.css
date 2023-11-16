@@ -1,7 +1,7 @@
 :root {
-    --primary: #b434c0;
-    --dc: #d15dff;
-    --bg: #010101;
+--primary: #b434c0;
+--dc: #d15dff;
+--bg: #010101;
 
 }
 
@@ -21,7 +21,7 @@ body {
     background-color: var(--bg);
     color: #ffffff;
 
-    /* min-height: 2000px; */
+/* min-height: 2000px; */
 }
 
 /* Navbar */
@@ -182,10 +182,10 @@ body {
 /* Popcat Game*/
 #game-container {
     display: flex;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     align-items: flex-end; /* Mengatur elemen ke bawah */
-    justify-content: flex-start; /* Mengatur elemen ke kiri */
+    justify-content: flex-end; /* Mengatur elemen ke kiri */
     height: 100px; /* Sesuaikan tinggi sesuai kebutuhan */
     width: 100%; /* Memenuhi lebar footer */
     padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
@@ -194,6 +194,7 @@ body {
 #popcat {
     position: fixed;
     bottom: 0;
+    right: 0; /* Mengatur elemen ke kanan */
     width: 200px;
     height: 200px;
     background-color: transparent;
@@ -215,27 +216,26 @@ body {
     z-index: 9999;
 }
 
-/* CSS untuk Pop Up dengan Animasi Bounce dari Tengah */
-@keyframes bounceIn {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+@keyframes bounceIn { /* CSS untuk Pop Up dengan Animasi Bounce dari Tengah */
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+    }
 
 @keyframes bounceOut {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 #popUpContainer {
@@ -250,35 +250,47 @@ body {
     border-radius: 2px;
     text-align: center;
     z-index: 9999;
+    width: 50%; /* Sesuaikan lebar sesuai kebutuhan */
+    height: auto; /* Sesuaikan tinggi sesuai kebutuhan */
 }
 
-/* Menampilkan popup dengan animasi */
-#popUpContainer.show {
-    animation: bounceIn 0.5s ease forwards;
+#popUpContainer.show { /* Menampilkan popup dengan animasi */
+    animation: bounceIn 0.3s ease forwards;
 }
 
 #closePopUp {
-   position: absolute;
-   top: -1px;
-   right: -1px;
-   font-size: 50px;
-   cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Tambahkan warna teks jika diperlukan */
 }
 
-/* Menghilangkan popup dengan animasi */
-#popUpContainer.hide {
-    animation: bounceOut 0.5s ease forwards;
-}
+/* Pop Cat Game End*/
 
-/* Pop Cat Game*/
 
-/* Bagian About */
+
+
+
+
+/* Bagian About Video */
 .about {
     padding: 1.4rem 7%;
     text-align: center;
 }
+.about h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.about h2 span {
+    color: var(--primary);
+}
 
-/* Bentuk tombol Akun */
 .about .new-tab-button {
     display: inline-block;
     margin: 10px; /* Sesuaikan margin sesuai kebutuhan */
@@ -292,8 +304,48 @@ body {
     border-radius: 8px; /* Membuat sudut gambar menjadi agak melengkung */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan ke gambar */
 }
+/* Added styles for the video container */
+.about iframe {
+    width: 100%;
+    height: 400px; /* Sesuaikan tinggi sesuai kebutuhan */
+    margin-top: 20px; /* Sesuaikan margin sesuai kebutuhan */
+}
 
-/* bentuk tombol */
+/* tombol dan text */
+.about .video-info {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Menengahkan secara vertikal */
+}
+
+.about .left-content,
+.about .right-content {
+    flex: 1;
+}
+
+.about .new-tab-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.about .new-tab-button img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about .right-content p {
+    color: #fff;
+    text-align: left; /* Rata kiri teks */
+    font-size: 16px; 
+}
+
+/* Bagian About Video End */
 
 
 
@@ -359,78 +411,78 @@ footer .credit teng {
 
 /* Laptop */
 @media (max-width: 1366px){
-    html {
-        font-size: 75%;
-    }
-    #game-container  {
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        align-items: flex-end; /* Mengatur elemen ke bawah */
-        justify-content: flex-start; /* Mengatur elemen ke kiri */
-        height: 100px; /* Sesuaikan tinggi sesuai kebutuhan */
-        width: 100%; /* Memenuhi lebar footer */
-        padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
-    }
-    #popcat {
-        transform: scale(1);
-    }
+html {
+    font-size: 75%;
+}
+#game-container  {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    align-items: flex-end; /* Mengatur elemen ke bawah */
+    justify-content: flex-start; /* Mengatur elemen ke kiri */
+    height: 100px; /* Sesuaikan tinggi sesuai kebutuhan */
+    width: 100%; /* Memenuhi lebar footer */
+    padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+}
+#popcat {
+    transform: scale(1);
+}
 }
 
 /* Tablet */
 @media (max-width: 768px){
-    html {
-        font-size: 62.5%;
-    }
+html {
+    font-size: 62.5%;
+}
 
-    #hamburger-menu {
-        display: inline-block;
-    }
+#hamburger-menu {
+    display: inline-block;
+}
 
-    .navbar-nav {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: #fff;
-        width: 30rem;
-        height: 100vh;
-        transition: 0.3s;
-    }
+.navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+}
 
-    .navbar .navbar-nav.active {
-        right: 0;
-    }
+.navbar .navbar-nav.active {
+    right: 0;
+}
 
-    .navbar .navbar-nav.active teng {
-        color: var(--bg);
-        display: block;
-        margin: 1.5rem;
-        padding: 0.5rem;
-        font-size: 2rem;
-    }
+.navbar .navbar-nav.active teng {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
 
-    .navbar .navbar-nav teng::after {
-        transform-origin:  0 0;
-    }
+.navbar .navbar-nav teng::after {
+    transform-origin:  0 0;
+}
 
-    .navbar .navbar-nav teng:hover::after {
-        transform: scaleX(0.2);
-    }
+.navbar .navbar-nav teng:hover::after {
+    transform: scaleX(0.2);
+}
 
-    #game-container  {
-        display: flex;
-        position: absolute;
-        bottom: 0;
-        align-items: flex-end; /* Mengatur elemen ke bawah */
-        justify-content: flex-start; /* Mengatur elemen ke kiri */
-        height: 40px; /* Sesuaikan tinggi sesuai kebutuhan */
-        width: 40%; /* Memenuhi lebar footer */
-        padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
-    }
-    #popcat {
-        transform: scale(0.8);
-        top: 70%;
-    }
+#game-container  {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    align-items: flex-end; /* Mengatur elemen ke bawah */
+    justify-content: flex-start; /* Mengatur elemen ke kiri */
+    height: 40px; /* Sesuaikan tinggi sesuai kebutuhan */
+    width: 40%; /* Memenuhi lebar footer */
+    padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+}
+#popcat {
+    transform: scale(0.8);
+    top: 70%;
+}
 
 }
 
@@ -439,14 +491,14 @@ footer .credit teng {
 
 /* Hape */
 @media (max-width: 450px){
-    html {
-        font-size: 55%;
-    }
+html {
+    font-size: 55%;
+}
 
-    
-    #popcat {
-        transform: bottom(-50px);
-        position: relative;
-    }
-    
+
+#popcat {
+    transform: bottom(-50px);
+    position: relative;
+}
+
 }
