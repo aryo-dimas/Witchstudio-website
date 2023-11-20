@@ -125,7 +125,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 10;
+    z-index: -8888;
 }
 
 
@@ -239,9 +239,9 @@ body {
 }
 
 #popUpContainer {
-    position: absolute;
-    top: 10%;
-    left: 10%;
+    position: fixed;
+    top: 7em;
+    left: 50%;
     transform: translate(-50%, -50%) scale(0);
     animation: bounceIn 0.5s ease forwards;
     display: none;
@@ -250,11 +250,11 @@ body {
     border-radius: 2px;
     text-align: center;
     z-index: 9999;
-    width: 50%; /* Sesuaikan lebar sesuai kebutuhan */
-    height: auto; /* Sesuaikan tinggi sesuai kebutuhan */
+    width: 50%;
+    height: auto;
 }
 
-#popUpContainer.show { /* Menampilkan popup dengan animasi */
+#popUpContainer.show {
     animation: bounceIn 0.3s ease forwards;
 }
 
@@ -265,8 +265,9 @@ body {
     transform: translateX(-50%);
     font-size: 24px;
     cursor: pointer;
-    color: #fff; /* Tambahkan warna teks jika diperlukan */
+    color: #fff;
 }
+
 
 /* Pop Cat Game End*/
 
@@ -352,6 +353,36 @@ body {
 
 
 
+/* Scroll Slide bar */
+.slider-container {
+    overflow: hidden;
+}
+
+.scroll-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -15px;
+}
+
+.card-slider {
+    display: flex;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin: 0 15px;
+}
+/* Scroll Slide bar End */
+
+
+
+
+
+
 
 
 
@@ -409,12 +440,14 @@ footer .credit teng {
 
 
 
+
+
 /* Laptop */
-@media (max-width: 1366px){
-html {
+@media (max-width: 1366px) {
+  html {
     font-size: 75%;
-}
-#game-container  {
+  }
+  #game-container  {
     display: flex;
     position: absolute;
     bottom: 0;
@@ -423,23 +456,23 @@ html {
     height: 100px; /* Sesuaikan tinggi sesuai kebutuhan */
     width: 100%; /* Memenuhi lebar footer */
     padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
-}
-#popcat {
+  }
+  #popcat {
     transform: scale(1);
-}
+  }
 }
 
 /* Tablet */
-@media (max-width: 768px){
-html {
+@media (max-width: 768px) {
+  html {
     font-size: 62.5%;
-}
+  }
 
-#hamburger-menu {
+  #hamburger-menu {
     display: inline-block;
-}
+  }
 
-.navbar-nav {
+  .navbar-nav {
     position: absolute;
     top: 100%;
     right: -100%;
@@ -447,29 +480,29 @@ html {
     width: 30rem;
     height: 100vh;
     transition: 0.3s;
-}
+  }
 
-.navbar .navbar-nav.active {
+  .navbar .navbar-nav.active {
     right: 0;
-}
+  }
 
-.navbar .navbar-nav.active teng {
+  .navbar .navbar-nav a {
     color: var(--bg);
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
-}
+  }
 
-.navbar .navbar-nav teng::after {
-    transform-origin:  0 0;
-}
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
 
-.navbar .navbar-nav teng:hover::after {
+  .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
-}
+  }
 
-#game-container  {
+  #game-container {
     display: flex;
     position: absolute;
     bottom: 0;
@@ -478,27 +511,24 @@ html {
     height: 40px; /* Sesuaikan tinggi sesuai kebutuhan */
     width: 40%; /* Memenuhi lebar footer */
     padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
-}
-#popcat {
+  }
+
+  #popcat {
     transform: scale(0.8);
     top: 70%;
+  }
 }
-
-}
-
-
-
 
 /* Hape */
-@media (max-width: 450px){
-html {
+@media (max-width: 450px) {
+  html {
     font-size: 55%;
-}
+  }
 
-
-#popcat {
-    transform: bottom(-50px);
+  #popcat {
+    transform: translateY(-50px);
     position: relative;
-}
-
+    right: -200px;
+    bottom: -50px;
+  }
 }

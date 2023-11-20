@@ -19,6 +19,8 @@ const debugEl = document.getElementById("debug"),
   time_per_icon = 100,
   indexes = [0, 0, 0];
 
+let leverPressCount = 0;
+
 /**
  * Roll one reel
  */
@@ -71,8 +73,29 @@ function rollAll() {
         document.querySelector(".slots").classList.remove(winCls);
       }, 2000);
     }
+
+    // Continue to the next round
+    setTimeout(rollAll, 1000);
   });
 }
+
+/**
+ * Handle lever press
+ */
+function onLeverPress() {
+  if (leverPressCount < 9) {
+    leverPressCount++;
+    debugEl.textContent = `Lever pressed ${leverPressCount} times.`;
+  } else {
+    leverPressCount = 0;
+    debugEl.textContent = "Player wins!";
+    setTimeout(rollAll, 1000);
+  }
+}
+
+// Attach lever press event listener
+const lever = document.getElementById("lever");
+lever.addEventListener("click", onLeverPress);
 
 // Kickoff
 setTimeout(rollAll, 1000);

@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Tambahkan event listener untuk menutup popup dengan animasi
   closePopUp.addEventListener("click", function (event) {
     popUpContainer.classList.remove("show");
-    
+
     setTimeout(() => {
       popUpContainer.style.display = "none";
     }, 500);
@@ -90,16 +90,80 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 500);
     }
   });
-});
 
+  // Scroll Slide bar
+  const slider = document.querySelector(".card-slider");
+  let isDragging = false;
+  let startPosition = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let animationId;
 
+  // Tentukan indeks awal slider (misalnya, indeks ke-5555)
+  const startIndex = 5555;
+  const initialTranslate = -startIndex * 100;
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+  // Inisialisasi posisi awal
+  currentTranslate = initialTranslate;
+  slider.style.transform = `translateX(${initialTranslate}%)`;
 
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
+  // Event Listeners
+  slider.addEventListener("mousedown", startDragging);
+  slider.addEventListener("touchstart", startDragging);
+  slider.addEventListener("mouseup", endDragging);
+  slider.addEventListener("touchend", endDragging);
+  slider.addEventListener("mouseleave", endDragging);
+  slider.addEventListener("mousemove", drag);
+  slider.addEventListener("touchmove", drag);
+
+  function startDragging(e) {
+    if (e.type === "touchstart") {
+      startPosition = e.touches[0].clientX;
+    } else {
+      startPosition = e.clientX;
+    }
+    isDragging = true;
+    animationId = requestAnimationFrame(animation);
+    slider.style.transition = "none";
+  }
+
+  function endDragging() {
+    isDragging = false;
+    cancelAnimationFrame(animationId);
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -100 && currentTranslate !== 0) {
+      // Swipe to the left
+      currentTranslate += 100;
+    } else if (
+      movedBy > 100 &&
+      currentTranslate !== -slider.offsetWidth * (slider.children.length - 1)
+    ) {
+      // Swipe to the right
+      currentTranslate -= 100;
+    }
+
+    slider.style.transform = `translateX(${currentTranslate}%)`;
+    slider.style.transition = "transform 0.5s ease";
+  }
+
+  function drag(e) {
+    if (isDragging) {
+      let currentPosition;
+      if (e.type === "touchmove") {
+        currentPosition = e.touches[0].clientX;
+      } else {
+        currentPosition = e.clientX;
+      }
+      const diff = currentPosition - startPosition;
+      currentTranslate = prevTranslate + (diff / slider.offsetWidth) * 100;
+    }
+  }
+
+  function animation() {
+    if (isDragging) {
+      requestAnimationFrame(animation);
+    }
+    slider.style.transform = `translateX(${currentTranslate}%)`;
+  }
 });
