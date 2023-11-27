@@ -1,0 +1,536 @@
+/*https://bytewebster.com/*/
+/*https://bytewebster.com/*/
+/*https://bytewebster.com/*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% );
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(1px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+}
+
+.swiper-slide-active {
+  filter: blur(0px);
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper-slide span {
+  text-transform: uppercase;
+  color: #fff;
+  background: #1b7402;
+  padding: 7px 18px 7px 25px;
+  display: inline-block;
+  border-radius: 0 20px 20px 0px;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.swiper-slide--one span {
+  background: #62667f;
+}
+
+.swiper-slide--two span {
+  background: #087ac4;
+}
+
+.swiper-slide--three span {
+  background: #b45205;
+}
+
+.swiper-slide--four span {
+  background: #087ac4;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* On Slide */
+.text-content {
+  text-align: center;
+}
+
+.swiper-slide h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-bottom: 80px;
+  padding: 25px 45px 0 25px;
+}
+
+.swiper-slide p {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  padding: 0 25px 35px 25px;
+} 
+
+.swiper-slide svg {
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  margin-right: 7px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+
+/* Slide One Start*/
+.swiper-slide--one {
+  position: relative;
+  overflow: hidden; /* Untuk memastikan elemen teks yang lebih besar dari video tidak muncul di luar slide */
+}
+
+.swiper-slide--one .text-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.swiper-slide--one h2 {
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 2;
+}
+
+.swiper-slide--one p{
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 1;
+}
+
+.swiper-slide--one::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400);
+  z-index: 1; /* Letakkan di depan video */
+  border-radius: 10px; /* Sesuaikan dengan border-radius yang digunakan pada video */
+}
+
+.swiper-slide--one .btn {
+  display: block;
+  width: 100%;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.swiper-slide--one video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-fanimate {
+  background-color: hsla(150, 3%, 24%, 0.0); /* 0.5 adalah nilai alpha */
+  color: #fff;
+}
+
+
+
+
+/* Slide Two Start*/
+.swiper-slide--two {
+  position: relative;
+  overflow: hidden; /* Untuk memastikan elemen teks yang lebih besar dari video tidak muncul di luar slide */
+}
+
+.swiper-slide--two .text-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+.swiper-slide--two h2 {
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 3;
+}
+
+.swiper-slide--two p {
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 3;
+}
+
+.swiper-slide--two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400);
+  z-index: 2; /* Letakkan di depan video */
+  border-radius: 10px; /* Sesuaikan dengan border-radius yang digunakan pada video */
+}
+
+.swiper-slide--two .btn {
+  display: block;
+  width: 100%;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.swiper-slide--two video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-car1 {
+  background-color: hsla(150, 3%, 24%, 0.0); /* 0.5 adalah nilai alpha */
+  color: #fff;
+}
+
+
+
+/* Slide Three Start*/
+.swiper-slide--three {
+  position: relative;
+  overflow: hidden; /* Untuk memastikan elemen teks yang lebih besar dari video tidak muncul di luar slide */
+}
+
+.swiper-slide--three .text-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+.swiper-slide--three h2 {
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 2;
+}
+
+.swiper-slide--three p{
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 1;
+}
+
+.swiper-slide--three::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400);
+  z-index: 1; /* Letakkan di depan video */
+  border-radius: 10px; /* Sesuaikan dengan border-radius yang digunakan pada video */
+}
+
+.swiper-slide--three .btn {
+  display: block;
+  width: 100%;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.swiper-slide--three video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-pond5 {
+  background-color: hsla(150, 3%, 24%, 0.0); /* 0.5 adalah nilai alpha */
+  color: #fff;
+}
+
+
+
+
+/* Slide four Start*/
+.swiper-slide--four {
+  position: relative;
+  overflow: hidden; /* Untuk memastikan elemen teks yang lebih besar dari video tidak muncul di luar slide */
+}
+
+.swiper-slide--four .text-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+.swiper-slide--four h2 {
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 2;
+}
+
+.swiper-slide--four p{
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 1;
+}
+
+.swiper-slide--four::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400);
+  z-index: 1; /* Letakkan di depan video */
+  border-radius: 10px; /* Sesuaikan dengan border-radius yang digunakan pada video */
+}
+
+.swiper-slide--four .btn {
+  display: block;
+  width: 100%;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.swiper-slide--four video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-editfoto {
+  background-color: hsla(150, 3%, 24%, 0.0); /* 0.5 adalah nilai alpha */
+  color: #fff;
+}
+
+
+
+/* Slide Five Start*/
+.swiper-slide--five {
+  position: relative;
+  overflow: hidden; /* Untuk memastikan elemen teks yang lebih besar dari video tidak muncul di luar slide */
+}
+
+.swiper-slide--five .text-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+.swiper-slide--five h2 {
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 2;
+}
+
+.swiper-slide--five p{
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 1;
+}
+
+.swiper-slide--four::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400);
+  z-index: 1; /* Letakkan di depan video */
+  border-radius: 10px; /* Sesuaikan dengan border-radius yang digunakan pada video */
+}
+
+.swiper-slide--five .btn {
+  display: block;
+  width: 100%;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.swiper-slide--five video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-paralax {
+  background-color: hsla(150, 3%, 24%, 0.0); /* 0.5 adalah nilai alpha */
+  color: #fff;
+}
+
+
+
+
+/* Slide Six Start*/
+.swiper-slide--six {
+  position: relative;
+  overflow: hidden; /* Untuk memastikan elemen teks yang lebih besar dari video tidak muncul di luar slide */
+}
+
+.swiper-slide--six .text-content {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+
+.swiper-slide--six h2 {
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 2;
+}
+
+.swiper-slide--six p{
+  font-size: 1rem;
+  position: fixed;
+  padding: auto;
+  z-index: 1;
+}
+
+.swiper-slide--six::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400);
+  z-index: 1; /* Letakkan di depan video */
+  border-radius: 10px; /* Sesuaikan dengan border-radius yang digunakan pada video */
+}
+
+.swiper-slide--six .btn {
+  display: block;
+  width: 100%;
+  padding: 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.swiper-slide--six video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-button {
+  background-color: hsla(150, 3%, 24%, 0.0); /* 0.5 adalah nilai alpha */
+  color: #fff;
+}
+
+
+
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}

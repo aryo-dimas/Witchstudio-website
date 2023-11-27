@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Snake Game JavaScript</title>
+    <link rel="stylesheet" href="css/snake.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="js/snake.js" defer></script>
+    <link rel="stylesheet" href="css/popupbonus.css" />
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Menuju halaman 1 -->
+    <div class="tombol-container">
+        <a href="index.html" class="tombol">
+            <img src="gif/Suci_the_Ghost.gif" alt="Tombol">
+        </a>
+    </div>
+    <!-- Menuju halaman 1 Ends -->
+
+    <div class="wrapper">
+      <div class="game-details">
+        <span class="score">Score: 0</span>
+        <span class="high-score">High Score: 0</span>
+      </div>
+      <div class="play-board"></div>
+      <div class="controls">
+        <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+        <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+        <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+        <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+      </div>
+    </div>
+
+    <!-- Pop Up 1 -->
+    <section>
+      <div class="modal-box">
+        <img src="gif/Happy_little_Pumpkin.gif" alt="Hadiah" style="width: 300px; height: 300px;">
+        <!-- <i class="fa-regular fa-circle-check"></i> -->
+        <h2>Completed</h2>
+        <h3>You get this item for free, grab it quickly before it runs out !</h3>
+
+        <div class="buttons">
+          <button class="close-btn">Ok, Close</button>
+          <button onclick="openFile()">Open File</button>
+        </div>
+      </div>
+    </section>
+    <!-- Pop Up 1 Ends -->
+
+    <style>
+      body {
+        background: url('images/bg_snake.jpg') center/cover fixed;
+        margin: 0;
+        height: 100%;
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </body>
+</html>

@@ -1,230 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Witch Sudio</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,900&display=swap" rel="stylesheet">
-
-    <!-- Featers Icon -->
-    <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- My Style -->
-    <link rel="stylesheet" href="css/style.css">
-
-    
-
-
-    <!-- Background Webem  -->
-    <style>
-        video {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        #content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            color: #fff;
-            padding-top: 20px;
-        }
-    </style>
-
+     <title>WitchStudio.com</title>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/magnific-popup.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/bytewebster-style.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+     <link rel="stylesheet" href="./style.css">
+     <!-- 
+     <link rel="stylesheet" href="./css/popuphadiah.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+     -->
 
 </head>
 <body>
-
-    <!-- Navbar Start -->
-    <nav class="navbar">
-        <div class="navbar-Symbol">
-            <a href="slot.html" class="tombol">
-                <img src="gif/Suci_the_Ghost.gif" alt="Tombol">
-            </a>
-        </div>
-
-        <teng href="#"class="navbar-logo">Witch<span>studio</span>.</teng>
-        
-        <div class="navbar-nav">
-            <teng href="#home">Home</teng>
-            <teng href="#abaut">Tentang Kami</teng>
-            <teng href="#menu">Menu</teng>
-            <teng href="#contact">Kontak</teng>
-        </div>
-
-        <div class="navbar-extra">
-            <teng href="#" id="search"><i data-feather="search"></i></teng>
-            <teng href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></teng>
-            <teng href="#" id="hamburger-menu"><i data-feather="menu"></i></teng>
-        </div>
-    </nav>
-    <!-- Navbar Ens -->
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
 
 
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
 
-    <!-- Bagian Utama Hero Start-->
-    <section class="hero" id="home">
-        <main class="content">
-            <h1>Welcome To My <span>Website</span></h1>
-            <p>
-                Studio Imajinasi, keajaiban animasi dan editing. Setiap proyek langkah karya seni. Selamat datang di Studio Imajinasi, cerita visual yang luar biasa.
-            </p>
-            <d>Tekan <span id="score">0</span>x pop!   Untuk mendapatkan kode promo!</d>
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
 
-        </main>  
-    </section>
-    <!-- Bagian Utama Hero End -->
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand">Witch<span>Studio</span>.</a>
+               </div>
 
-    <!-- Scroll Slide bar -->
-    <div class="slider-container">
-        <div class="scroll-slider"> <!-- Tambahkan kelas .scroll-slider di sini -->
-            <div class="card-slider">
-                <!-- Product 1 -->
-                <div class="carousel-item">
-                    <div class="product-card">
-                        <h3>Product 1</h3>
-                        <p>Price: Rp275.000</p>
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="#home" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About</a></li>
+                         <li><a href="#blog" class="smoothScroll">Blog</a></li>
+                         <li><a href="#work" class="smoothScroll">Our Work</a></li>
+                         <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="https://www.facebook.com/groups/bytewebster"><i class="bi bi-facebook"></i></a></li>
+                         <li><a href="https://twitter.com/ByteWebster"><i class="bi bi-twitter-x"></i></a></li>
+                         <li><a href="https://bytewebster.com/"><i class="bi bi-threads"></i></a></li>
+                         <li><a href="https://bytewebster.com/"><i class="bi bi-youtube"></i></a></li>
+                         <li><a href="https://www.instagram.com/bytewebster/"><i class="bi bi-instagram"></i></a></li>
+                         <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Sign in / Join Us</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-12">
+                         <div class="home-info">
+                              <h1>Welcome to my<br>Website.</h1>
+                              <a href="#blog" class="btn section-btn smoothScroll">Play Game</a>
+                              <span>
+                                   Play The Game !
+                                   <small>to get free items</small>
+                              </span>
+                         </div>
                     </div>
-                </div>
 
-                <!-- Product 2 -->
-                <div class="carousel-item">
-                    <div class="product-card">
-                        <h3>Product 2</h3>
-                        <p>Price: Rp308.750</p>
+                    <div class="swiper">
+                         <div class="swiper-wrapper">
+                              <!-- Swiper Slide one -->
+                              <div class="swiper-slide swiper-slide--one">
+                                   <div class="text-content">           
+                                        <div class="btn-container">
+                                             <a href="https://www.fiverr.com/aryo_dimas/make-a-loop-video-with-cute-characters?context_referrer=seller_page&ref_ctx_id=d0ca604297d911f550c743e77318114f&pckg_id=1&pos=2&imp_id=7a293560-98dc-4941-9322-0d84e1795df7" 
+                                                  target="_blank" class="btn btn-fanimate">
+                                             </a>
+                                        </div>
+                                   </div>
+                                   <h2>Cute Character Animation</h2>
+                                   <p>Anda bisa memesan karakter yang lucu disini</p> 
+                                   <video autoplay muted loop>
+                                        <source src="webm/Character.webm" type="video/webm">
+                                   </video>
+                              </div>
+                              <!-- Swiper Slide two -->
+                              <div class="swiper-slide swiper-slide--two">
+                                   <div class="text-content">
+                                        <div class="btn-container">
+                                             <a href="https://www.fiverr.com/aryo_dimas/animate-your-dream-car-into-looping-video-professionally?context_referrer=seller_page&ref_ctx_id=0e9c9dd588f011b36a6a491ae21b4ccf&pckg_id=1&pos=7&imp_id=2845e068-fc5a-4a58-be4c-b32c5a831956" 
+                                                  target="_blank" class="btn btn-car1">
+                                             </a>
+                                        </div>
+                                   </div>
+                                   <h2>Anime My Ride</h2>
+                                   <p>Buatkan video animasi mobil anda yang keren</p> 
+                                   <video autoplay muted loop>
+                                        <source src="webm/Civic_FD2R.webm" type="video/webm">
+                                   </video>
+                              </div>
+                              <!-- Swiper Slide three -->
+                              <div class="swiper-slide swiper-slide--three">
+                                   <div class="text-content">
+                                        <div class="btn-container">
+                                             <a href="https://www.fiverr.com/aryo_dimas/draw-cute-cartoon-characters-or-animals-in-24-hours?context_referrer=seller_page&ref_ctx_id=d0ca604297d911f550c743e77318114f&pckg_id=1&pos=1&imp_id=da862d51-c7f7-40af-9c3d-1340b5f9eeb4" 
+                                                  target="_blank" class="btn btn-pond5">
+                                             </a>
+                                        </div>
+                                   </div>
+                                   <h2>Add Product</h2>
+                                   <p>Menganimasikan foto produk ada supaya lebih menarik</p>
+                                   <video autoplay muted loop>
+                                        <source src="webm/AddsProduct.webm" type="video/webm">
+                                   </video>
+                              </div>
+                              <!-- Swiper Slide four -->
+                              <div class="swiper-slide swiper-slide--four">
+                                   <div class="text-content">
+                                        <div class="btn-container">
+                                             <a href="https://www.fiverr.com/aryo_dimas/crop-the-image-and-change-white-transparent-or-colored" 
+                                                  target="_blank" class="btn btn-editfoto">
+                                             </a>
+                                        </div>
+                                   </div>
+                                   <h2>Edit Foto</h2>
+                                   <p>Manipulasi foto menggunakan Photoshop</p>
+                                   <video autoplay muted loop>
+                                        <source src="webm/Editfoto.webm" type="video/webm">
+                                   </video>
+                              </div>
+                              <!-- Swiper Slide five -->
+                              <div class="swiper-slide swiper-slide--four">
+                                   <div class="text-content">
+                                        <div class="btn-container">
+                                             <a href="https://www.instagram.com/art_you_dimas/" 
+                                                  target="_blank" class="btn btn-paralax">
+                                             </a>
+                                        </div>
+                                   </div>
+                                   <h2>Paralax</h2>
+                                   <p>Convert your foto to video paralax</p>
+                                   <video autoplay muted loop>
+                                        <source src="webm/Paralax.webm" type="video/webm">
+                                   </video>
+                              </div>
+                              <!-- Swiper Slide six -->
+                              <div class="swiper-slide swiper-slide--six">
+                                   <div class="text-content">
+                                        <div class="btn-container">
+                                             <a href="https://www.etsy.com/shop/WitchStream?ref=l2-about-shopname" 
+                                                  target="_blank" class="btn btn-button">
+                                             </a>
+                                        </div>
+                                   </div>
+                                   <h2>Custom Transition</h2>
+                                   <p>Pesan transisi yang keren buat twich</p>
+                                   <video autoplay muted loop>
+                                        <source src="webm/Cool_transition.webm" type="video/webm">
+                                   </video>
+                              </div>
+
+                         </div>
+                         <!-- Add Pagination -->
+                         <div class="swiper-pagination"></div>
                     </div>
-                </div>
-                <!-- Add more cards as needed -->
-            </div>
-        </div>
-    </div>
-    <!-- Scroll Slide bar End -->
+               </div>
+          </div>
+     </section>
 
 
-    <!-- Background Webem -->
-    <div class="video-container">
-        <video id="background-video" autoplay muted loop>
-            <source src="webem/Civic_FD2R.webm" type="video/webm">
-        </video>
-    </div>
+     <!-- ABOUT -->
+     <section id="about" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
 
-    <!-- Tentang kami Start -->
-    <section id="about" class="about">
-        <main class="content"></main>
-            <h2>Social <span>Media</span></h2>
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <div class="section-title">
+                                   <h2>There's Something New From us</h2>
+                                   <span class="line-bar">...</span>
+                              </div>
+                              <p>
+                                   Membuat karakter lucu tanpa ribet, dengan video berulang/loop, dengan kualitas bagus, untuk panflet, Instagram Feed, Instagram Story atau video iklan produk kamu supaya lebih menarik kamu juga bisa memilih karakter yang kamu mau seperti Binatang, Benda, atau Tumbuhan
+                                   
+                              </p>
+                              <p>From design and development to art and entrepreneurship, our portfolio is a testament to our passion for excellence and our commitment to pushing boundaries.</p>
+                         </div>
+                    </div>
 
-            <!-- Video YouTube -->
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/FGoa9VFaejo"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            ></iframe>
+                    <div class="col-md-6 col-sm-6"> <!-- Tambahkan class col-md-6 di sini -->
+                         <div class="about-info skill-thumb">
+                              <!-- Ganti link video YouTube di bawah ini -->
+                              <iframe width="100%" height="100%" style="max-width: 100%; height: 400px;" src="https://www.youtube.com/embed/FGoa9VFaejo" frameborder="0" allowfullscreen></iframe>
+                         </div>
+                    </div>
 
-            <div class="video-info">
-                <div class="left-content">
-                    <a href="https://www.fiverr.com/aryo_dimas/" target="_blank" class="new-tab-button">
-                        <img src="gif/Happy_little_Pumpkin.gif" alt="Tombol Gambar">
-                    </a>
-                </div>
-                <div class="right-content">
-                    <p>Bagus bukan!,</p>
-                    <p>Mau di buat kan animasi seperti itu ?, segera pesan disini</p>
-                    <p>kami akan membuatkan yang terbaik buat kamu.</p>
-                </div>
-            </div>
-    </section>
-    <!-- Tentang kami end -->
-
-    
-    <!-- Footer Start -->
-    <footer>
-
-        <div class="socials">
-            <a herf="#"><i data-feather="instagram"></i></a>
-            <a herf="#"><i data-feather="youtube"></i></a>
-            <a herf="#"><i data-feather="facebook"></i></a>
-            <a herf="#"><i data-feather="twitter"></i></a>
-            <a herf="#"><i data-feather="message-circle"></i></a>
-        </div>
-        <div class="links">
-            <teng href="#home">Home</teng>
-            <teng href="#about">Tentang Kami</teng>
-            <teng href="#menu">Menu</teng>
-            <teng href="#contact">Kontak</teng>
-        </div>
-        <div class="credit">
-            <p>Created by <teng href="">Aryo Dimas</teng>. | &copy; 2023.</p>
-        </div>
-
-        <!-- Pop Cat Foto -->
-        <div id ="game-container">
-            <img id="popcat" src="image/gambar-1.png" alt="Popcat Image">
-            <audio id="popSound" src="sound/pop_sound.mp3"></audio>
-        </div>
-
-        <div id="popUpContainer" class="pop-up-container">
-            <img id="popUpImage" src="image/img1.png" alt="Pop Up Image">
-            <span id="closePopUp" class="close-pop-up">&times;</span>
-        </div>
-        <!-- Pop Cat Foto -->
-
-        <!-- Lagu Pop Up -->
-        <audio id="background-music" src="sound/polish_cow.mp3"></audio>
-        <audio id="background-alert" src="sound/ewww.mp3"></audio>
-        
-    </footer>
-    <!-- Footer Start -->
-
-    <!-- Sertakan jQuery buat youtube -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            // Tangkap peristiwa klik pada tautan
-            $('a[href^="#"]').on('click', function(event) {
-                // Pastikan bahwa ini bukan tautan eksternal
-                if (this.hash !== "") {
-                    // Cegah perilaku default dari tautan
-                    event.preventDefault();
-
-                    // Ambil ID dari tautan yang diklik
-                    var target = this.hash;
-
-                    // Gulir ke elemen yang sesuai dengan kecepatan animasi
-                    $('html, body').animate({
-                        scrollTop: $(target).offset().top
-                    }, 800, function(){
-                        // Atur URL hash setelah animasi (opsional)
-                        window.location.hash = target;
-                    });
-                }
-            });
-        });
-    </script>
-    <!-- Sertakan jQuery buat youtube -->
+               </div>
+          </div>
+     </section>
 
 
 
-    <!-- Feather Icon -->
-    <script>
-      feather.replace();
-    </script>
-    
+     <!-- BLOG -->
+     <section id="blog" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
 
-    <!-- Java Script -->
-    <script src="js/script.js"></script>
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Play Game</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="slot.html"><img src="images/thumbnail_slot.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <small><i class="fa fa-clock-o"></i> Update: December 22, 2023</small>
+                                   <h3><a href="slot.html">Play Slot Games to get Lots of Item Prizes</a></h3>
+                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
+                                   <a href="slot.html" class="btn slot-btn">Play Now</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="snake.html"><img src="images/thumbnail_snake.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <small><i class="fa fa-clock-o"></i> December 14, 2023</small>
+                                   <h3><a href="snake.html">Play Game Snake Clasic to be Happy</a></h3>
+                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
+                                   <a href="snake.html" class="btn snake-btn">Play Now</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="blog-detail.html"><img src="https://cdn.pixabay.com/photo/2019/07/21/16/29/paris-4353082_1280.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <small><i class="fa fa-clock-o"></i> December 25, 2023</small>
+                                   <h3><a href="blog-detail.html">12 Interesting Fact About the Eiffel Tower</a></h3>
+                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
+                                   <a href="blog-detail.html" class="btn section-btn">Read article</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb">
+                              <div class="media-object media-left">
+                                   <a href="blog-detail.html"><img src="images/paris-4353082_1280.jpg" class="img-responsive" alt=""></a>
+                              </div>
+                              <div class="media-body blog-info">
+                                   <small><i class="fa fa-clock-o"></i> December 01, 2023</small>
+                                   <h3><a href="blog-detail.html">How Can We All Help Conserve Nature?</a></h3>
+                                   <p>Lorem ipsum dolor sit consectetur adipiscing morbi venenatis.</p>
+                                   <a href="blog-detail.html" class="btn section-btn">View Detail</a>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- WORK -->
+     <section id="work" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Our work</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="image-popup">
+                                   <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Clean &amp; Minimal</h3>
+                                        <small>Graphics Design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="image-popup">
+                                   <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Virtual Studio</h3>
+                                        <small>Labeling</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="image-popup">
+                                   <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>3D Modeling</h3>
+                                        <small>Artificial Intelligence</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="image-popup">
+                                   <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Paint Work</h3>
+                                        <small>Art, Design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+               </div>
+
+               <br>
+               <div class="row mt-5">
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="image-popup">
+                                   <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Clean &amp; Minimal</h3>
+                                        <small>Graphics Design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="image-popup">
+                                   <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Studio Bag</h3>
+                                        <small>Labeling</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="image-popup">
+                                   <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>3D Modeling</h3>
+                                        <small>Artificial Intelligence</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="image-popup">
+                                   <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fHdvcmt8ZW58MHx8MHx8fDA%3D" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Paint Work</h3>
+                                        <small>Art, Design</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-5 col-sm-12">
+                         <div class="footer-thumb footer-info"> 
+                              <h2>WitchStudio Company</h2>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h2>Company</h2>
+                              <ul class="footer-link">
+                                   <li><a href="#">About Us</a></li>
+                                   <li><a href="#">Join our team</a></li>
+                                   <li><a href="#">Read Blog</a></li>
+                                   <li><a href="#">Press</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-2 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h2>Services</h2>
+                              <ul class="footer-link">
+                                   <li><a href="#">Pricing</a></li>
+                                   <li><a href="#">Documentation</a></li>
+                                   <li><a href="#">Support</a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h2>Find us</h2>
+                              <p>123 We are everywhere, <br> Find us on google.com</p>
+                         </div>
+                    </div>                    
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="footer-bottom">
+                              <div class="col-md-5 col-sm-5">
+                                   <div class="copyright-text"> 
+                                        <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Aryo Dimas</p>
+                                   </div>
+                              </div>
+                              <div class="col-md-7 col-sm-7">
+                                   <ul class="social-icon">
+                                        <li><a href="https://www.facebook.com/" class="bi bi-facebook" attr="facebook icon"></a></li>
+                                        <li><a href="https://twitter.com/" class="bi bi-twitter-x"></a></li>
+                                        <li><a href="https://www.instagram.com/art_you_dimas" class="bi bi-instagram"></a></li>
+                                        <li><a href="https://treads.com/" class="bi bi-threads"></a></li>
+                                        <li><a href="https://youtube.com/c/aryo-dimas" class="bi bi-youtube"></a></li>
+                                        <li><a href="https://telegram.com/" class="bi bi-telegram"></a></li>
+                                        <li><a href="https://whatsapp.com/" class="bi bi-whatsapp"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+
+     <!-- MODAL -->
+     <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+               <div class="modal-content modal-popup">
+
+                    <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+
+                    <div class="modal-body">
+                         <div class="container-fluid">
+                              <div class="row">
+
+                                   <div class="col-md-12 col-sm-12">
+                                        <div class="modal-title">
+                                             <h2>WitchStudio.</h2>
+                                        </div>
+
+                                        <!-- NAV TABS -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                             <li class="active"><a href="#sign_up" aria-controls="sign_up" role="tab" data-toggle="tab">Create New account</a></li>
+                                             <li><a href="#sign_in" aria-controls="sign_in" role="tab" data-toggle="tab">Sign In</a></li>
+                                        </ul>
+
+                                        <!-- TAB PANES -->
+                                        <div class="tab-content">
+                                             <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
+                                                  <form action="#" method="post">
+                                                       <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
+                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Enter Mobile Number" required>
+                                                       <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
+                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                       <input type="submit" class="form-control" name="submit" value="Submit">
+                                                  </form>
+                                             </div>
+
+                                             <div role="tabpanel" class="tab-pane fade in" id="sign_in">
+                                                  <form action="#" method="post">
+                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                       <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                                       <input type="submit" class="form-control" name="submit" value="Submit">
+                                                       <a href="https://www.facebook.com/groups/bytewebster">Forgot your password?</a>
+                                                  </form>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+
+     <!-- swiper js -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+     <script  src="js/script.js"></script>
 
 </body>
 </html>
