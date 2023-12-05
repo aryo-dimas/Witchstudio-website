@@ -448,6 +448,12 @@
 
 
 
+
+
+
+
+
+
   /*---------------------------------------
       GANE             
   -----------------------------------------*/
@@ -619,6 +625,37 @@
   }
 
 
+  .image-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .icon-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 78px; /* Sesuaikan ukuran lebar sesuai kebutuhan */
+    height: 100px; /* Sesuaikan ukuran tinggi sesuai kebutuhan */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   /*---------------------------------------
@@ -714,6 +751,10 @@
   .social-icon li a:hover {
     color: #ad00f2;
   }
+
+
+
+
 
 
   /*---------------------------------------
