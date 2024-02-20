@@ -39,7 +39,7 @@ body {
 
 .card {
     width: calc(33.33% - 20px); /* Untuk mengatur tata letak pada layar desktop */
-    margin: 10px;
+    margin: 50px;
     position: relative;
 }
 
@@ -56,7 +56,7 @@ body {
     width: 100%;
     margin: 0;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #ffffffb3;
     border-radius: 0 0 5px 10px; /* Memberikan lengkungan pada bagian bawah judul */
     color: black;
 }
