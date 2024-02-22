@@ -1,6 +1,4 @@
-// https://bytewebster.com/
-// https://bytewebster.com/
-// https://bytewebster.com/
+
 document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".swiper", {
     effect: "coverflow",
