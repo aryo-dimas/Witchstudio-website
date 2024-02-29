@@ -73,7 +73,7 @@
   }
 
   a {
-    color: #252525;
+    color: #ffffff;
     font-weight: normal;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -115,13 +115,20 @@
     transition: 0.5s;
   }
 
+  .section-btn a {
+    display: block;
+    width: 100%; /* Sesuaikan lebar tombol sesuai kebutuhan */
+    height: 100%; /* Sesuaikan tinggi tombol sesuai kebutuhan */
+    text-decoration: none; /* Menghilangkan dekorasi tautan (jika ada) */
+  }
+
   .section-btn:hover,
   .section-btn:focus {
     background: var(--primary);  
-    background: -webkit-linear-gradient(to right, #0575E6, #05642b);  
-    background: linear-gradient(to right, #0575E6, #08692f); 
+    background: -webkit-linear-gradient(to right, var(--secondary), var(--primary));  
+    background: linear-gradient(to right, #1d1d1d, #2b2b2b); 
     border-color: transparent;
-    color: #393939;
+    color: #ffffff;
   }
 
   .overlay {
