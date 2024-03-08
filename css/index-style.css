@@ -85,6 +85,19 @@
     outline: none;
   }
 
+  b {
+    color: var(--bg);
+    font-weight: normal;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none !important;
+  }
+
+  b:hover, a:active, a:focus {
+    color: var(--primary);
+    outline: none;
+  }
+
   .section-title {
     margin-bottom: 60px;
   }
