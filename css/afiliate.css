@@ -38,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 50px;
 }
 
 .card {
@@ -90,7 +90,7 @@ body {
     }
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (minwidth: 300px) {
     .card {
         width: calc(70% - 20px); /* Pada layar Hp Besar, dua kartu akan ditampilkan dalam satu baris */
         margin: 10px;
