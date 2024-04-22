@@ -500,7 +500,7 @@
   }
 
   #blog-header {
-    /*background: url('../images/home-bg.jpg') no-repeat center center;*/
+    background: url('../images/home-bg.jpg') no-repeat center center; /*bug Fix latar belakang*/
     background-size: cover;
     display: -webkit-box;
     display: -webkit-flex;
