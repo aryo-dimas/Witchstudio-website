@@ -34,6 +34,23 @@ header .menu{
     gap: 20px;
     font-weight: 500;
 }
+.order-button {
+    display: inline-block;
+    background-color: #00b22d; /* Warna hijau */
+    color: #ffffff; /* Warna putih untuk teks */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px; /* Ujung rounded */
+    transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #01701d; /* Warna hijau yang lebih gelap saat hover */
+}
+
+
+
 /* css slider */
 .slider{
     height: 100vh;
@@ -203,6 +220,7 @@ header .menu{
 }
 .slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
+.slider .list .item.active a,
 .slider .list .item.active p:nth-child(3){
     transform: translateY(30px);
     filter: blur(20px);
@@ -214,6 +232,9 @@ header .menu{
 }
 .slider .list .item.active p:nth-child(3){
     animation-duration: 1.3s;
+}
+.slider .list .item.active a{
+    animation-duration: 1.6s;
 }
 .arrows{
     position: absolute;
