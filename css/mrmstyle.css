@@ -118,7 +118,7 @@ header .menu{
     margin-top: 20px; /* Jarak antara judul dan kartu-kartu */
     margin-bottom: 20px; /* Jarak antara judul dan slider */
     font-size: 24px; /* Ukuran font judul */
-    color: #333; /* Warna teks judul */
+    color: #5c5c5c; /* Warna teks judul */
 
 }
 
@@ -210,6 +210,30 @@ header .menu{
     font-size: 24px;
     color: #fff;
 }
+
+
+
+/* CSS tambahan untuk halaman kedua */
+.third-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.third-page .page-title {
+    text-align: center; /* Pusatkan teks judul */
+    margin-top: 20px; /* Jarak antara judul dan kartu-kartu */
+    margin-bottom: 20px; /* Jarak antara judul dan slider */
+    font-size: 24px; /* Ukuran font judul */
+    color: #5c5c5c; /* Warna teks judul */
+
+}
+
+
+
+
 
 
 

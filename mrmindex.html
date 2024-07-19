@@ -16,7 +16,7 @@
         </div>
         <ul class="menu">
             <li>Home</li>
-            <li>Blog</li>
+            <li>Order</li>
             <li><a href="index.html">Witch Studio</a></li>
         </ul>
         <div class="search">
@@ -102,6 +102,9 @@
 
 
 
+
+
+
     <!-- Halaman kedua -->
     <div class="second-page">
         <h1 class="page-title">PRODUCT WALLPAPER</h1>
@@ -142,6 +145,13 @@
                     <button onclick="openTab('https://motionrunner2.gumroad.com/l/civic-fd2r-front-beach-sunset')">Download</button>
                 </div>
             </div>
+            <div class="card" data-youtube-id="VuRhEIu_jYk">
+                <img src="images/car/civic_fk8_bs_back.jpg" alt="Gambar 6" class="card-image" data-lightbox-id="lightbox6">
+                <div class="card-buttons">
+                    <button onclick="openTab('https://youtu.be/VuRhEIu_jYk')">Preview</button>
+                    <button onclick="openTab('https://motionrunner2.gumroad.com/l/civic-fk8-typer')">Download</button>
+                </div>
+            </div>
 
             <!-- Lightboxes -->
             <div class="lightbox" id="lightbox1">
@@ -174,13 +184,54 @@
                     <span class="close-btn" onclick="closeLightbox('lightbox5')">x</span>
                 </div>
             </div>
+            <div class="lightbox" id="lightbox6">
+                <div class="lightbox-content">
+                    <iframe id="youtube-player5" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                    <span class="close-btn" onclick="closeLightbox('lightbox6')">x</span>
+                </div>
+            </div>
 
 
         </div>
     </div>
 
 
+
+
+
+    <!-- Halaman Ketiga -->
+    <div class="third-page">
+        <h1 class="page-title">Custom Order</h1>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="images/paket_1.jpg" alt="Gambar Custom 1" class="card-image">
+            </div>
+            <div class="card">
+                <img src="images/paket_2.jpg" alt="Gambar Custom 2" class="card-image">
+            </div>
+            <div class="card">
+                <img src="images/paket_3.jpg" alt="Gambar Custom 3" class="card-image">
+            </div>
+        </div>
+
+        <div class="card-buttons">
+            <button onclick="openTab('https://instagram.com/midnight_run_motion')">Contact on Instagram</button>
+        </div>
+    </div>
+
+    
+
+
     <!--  <script src="https://www.youtube.com/iframe_api"></script> -->
     <script src="js/mrmapp.js"></script>
+
+    <script>
+        function openTab(url) {
+            window.open(url, '_blank').focus();
+        }
+    </script>
+
+
 </body>
 </html>
