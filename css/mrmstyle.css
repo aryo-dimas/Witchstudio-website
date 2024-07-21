@@ -228,9 +228,58 @@ header .menu{
     margin-bottom: 20px; /* Jarak antara judul dan slider */
     font-size: 24px; /* Ukuran font judul */
     color: #5c5c5c; /* Warna teks judul */
-
 }
 
+.price-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.price {
+    width: 250px;
+    height: 420px;
+    border: 1px solid #8b8b8b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Mengatur radius sudut kartu */
+    overflow: hidden; /* Untuk memastikan konten di dalam kartu tidak menonjol keluar */
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.price:hover {
+    transform: translateY(-10px) scale(1.1);
+}
+
+.price-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.price-buttons { /*buat pencetan kartu*/
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.price-buttons button {
+    border-radius: 10px; /* Mengatur radius sudut untuk tombol */
+    padding: 10px 20px; /* Menambahkan padding untuk tombol agar lebih lebar */
+    margin: 5px; /* Menambahkan margin untuk menjaga jarak antara tombol */
+    cursor: pointer;
+    border: 0.5px solid white;
+    background-color: transparent; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Transisi saat tombol dihover */
+}
+
+.price-buttons button:hover {
+    background-color: #f7f7f7; /* Warna latar belakang tombol saat dihover */
+    color: #131313;
+}
 
 
 
