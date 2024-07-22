@@ -101,3 +101,5 @@ function closeLightbox(lightboxId) {
 function openTab(link) {
   window.open(link, "_blank");
 }
+
+
