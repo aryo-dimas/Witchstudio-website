@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COC Player Stats</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #121212; color: #fff; }
+    .card { background: #1e1e2f; padding: 20px; border-radius: 12px; width: 400px; }
+    h2 { color: #ffcc00; }
+    h3 { color: #4fc3f7; border-bottom: 1px solid #444; padding-bottom: 4px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2 id="playerName">Loading...</h2>
+    <div id="heroes"></div>
+    <div id="troops"></div>
+  </div>
+
+  <script>
+    const playerTag = "#P9RLV88PC"; // ganti dengan tag akun kamu
+    const apiToken = "b4g74z8a"; // isi dengan token asli dari supercell
+
+    async function fetchData() {
+      const res = await fetch(
+        `https://api.clashofclans.com/v1/players/${encodeURIComponent(playerTag)}`,
+        {
+          headers: { "Authorization": "Bearer " + apiToken }
+        }
+      );
+      const data = await res.json();
+
+      // Update tampilan
+      document.getElementById("playerName").innerText = 
+        `${data.name} (${data.tag}) - TH ${data.townHallLevel}`;
+
+      let heroesHtml = "<h3>Heroes</h3><ul>";
+      data.heroes.forEach(h => {
+        heroesHtml += `<li>${h.name}: level ${h.level}</li>`;
+      });
+      heroesHtml += "</ul>";
+      document.getElementById("heroes").innerHTML = heroesHtml;
+
+      let troopsHtml = "<h3>Troops</h3><ul>";
+      data.troops.slice(0,10).forEach(t => { // contoh: tampilkan 10 pertama
+        troopsHtml += `<li>${t.name}: level ${t.level}</li>`;
+      });
+      troopsHtml += "</ul>";
+      document.getElementById("troops").innerHTML = troopsHtml;
+    }
+
+    // Jalankan pertama kali
+    fetchData();
+
+    // Auto refresh tiap 60 detik
+    setInterval(fetchData, 60000);
+  </script>
+</body>
+</html>
